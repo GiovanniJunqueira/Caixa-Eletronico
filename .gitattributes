@@ -1,4 +1,6 @@
 verif = "sim"
 while verif == "sim":
-    print("Seja bem vind")
+    print("Seja bem vindo ao caixa eletrônico da FATEC")
+    valor = int(input("Qual será o valor do saque?"))
+    
     verif = str(input("quer continuar?\n"))
