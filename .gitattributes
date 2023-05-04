@@ -1,2 +1,4 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+verif = "sim"
+while verif == "sim":
+    print("Seja bem vind")
+    verif = str(input("quer continuar?\n"))
