@@ -3,7 +3,7 @@ while verif == "sim":
     print("Seja bem vindo ao caixa eletrônico da FATEC")
     valor = int(input("Qual será o valor do saque?\n"))
     print (f"Certo, para continuar o saque de {valor}, escolha a configuração de notas que deseja receber")
-    nota100 = int(input("Quantas notas de 100?"))
+    nota100 = int(input("Quantas notas de 100?\n"))
     total = 100 * nota100
     resto = valor - total
     if total>valor:
@@ -14,15 +14,21 @@ while verif == "sim":
             exit()
     elif total<valor:
             print(f"Certo, falta {resto} para escolher em outras cedúlas")
-            exit()
     nota50 = int(input("Quantas notas de 50?"))
+    total2 = 50 * nota50 + total
+    resto = valor - total2
+    if total2>valor:
+        print("Essa quantidade de notas ultrapassa o valor que irá sacar, tente novamente")
+        exit()
+    elif total2==valor:
+            print("Certo, seu valor está completo, retire seu dinheiro na saída indicada, até a proxima!")
+            exit()
+    elif total2<valor:
+            print(f"Certo, falta {resto} para escolher em outras cedúlas")
     nota20 = int(input("Quantas notas de 20?"))
     nota10 = int(input("Quantas notas de 10?"))
     nota5 = int(input("Quantas notas de 5?"))
     nota1 = int(input("Quantas notas de 1?"))
-    total = nota100 + nota50 + nota20 + nota10 + nota5 + nota1
-    while total != valor:
-        print("O valor total das cedúlas escolhida não bate com o valor que irá sacar, tente novamente")
-        exit()
     verif = str(input("quer continuar?\n"))
+    
     
