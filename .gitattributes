@@ -26,9 +26,28 @@ while verif == "sim":
     elif total2<valor:
             print(f"Certo, falta {resto} para escolher em outras cedúlas")
     nota20 = int(input("Quantas notas de 20?"))
+    total3 = 20 * nota20 + total2
+    resto = valor - total3
+    if total3>valor:
+        print("Essa quantidade de notas ultrapassa o valor que irá sacar, tente novamente")
+        exit()
+    elif total3==valor:
+            print("Certo, seu valor está completo, retire seu dinheiro na saída indicada, até a proxima!")
+            exit()
+    elif total3<valor:
+            print(f"Certo, falta {resto} para escolher em outras cedúlas")
     nota10 = int(input("Quantas notas de 10?"))
+    total4 = 10 * nota10 + total3
+    resto = valor - total4
+    if total4>valor:
+        print("Essa quantidade de notas ultrapassa o valor que irá sacar, tente novamente")
+        exit()
+    elif total4==valor:
+            print("Certo, seu valor está completo, retire seu dinheiro na saída indicada, até a proxima!")
+            exit()
+    elif total4<valor:
+            print(f"Certo, falta {resto} para escolher em outras cedúlas")
     nota5 = int(input("Quantas notas de 5?"))
     nota1 = int(input("Quantas notas de 1?"))
     verif = str(input("quer continuar?\n"))
-    
-    
+
