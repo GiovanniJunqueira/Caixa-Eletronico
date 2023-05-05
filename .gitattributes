@@ -66,8 +66,7 @@ while verif == "sim":
         exit()
     elif total6==valor:
             print("Certo, seu valor está completo, retire seu dinheiro na saída indicada, até a proxima!")
-            exit()
     elif total6<valor:
-            print(f"Certo, falta {resto} para escolher em outras cedúlas")
+            print(f"Suas notas não atingiram o valor total, tente novamente")
     verif = str(input("quer continuar?\n"))
 
